@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino</title>
+
+    <style>
+        body {
+            background-color: rgb(231, 225, 225);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input {
+            display: flex;
+            
+
+        }
+        #n1, #n2, input, .soma {
+            width: 60px;
+            border-radius: 20px;
+            padding: 5px;
+            margin-right: 3px;
+            background-color: rgb(102, 243, 9);
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>SOMANDO NÚMEROS</h1>
+<div class="input">
+    <input type="number" name="n1" id="n1"><strong style="font-size: 30px; margin-right: 5px;">*</strong>
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="=" onclick="somar()">
+    <div class="soma"></div>
+</div>
+
+
+    <script>
+           res.addEventListener('click',somar)
+            function somar(){
+                var t1 = document.getElementById("n1")
+                var t2 = document.getElementById("n2")
+                var res = document.querySelector("div.soma")
+
+               var tn1 = Number(t1.value)
+               var tn2 = Number(t2.value)
+                var s = tn1 * tn2
+                res.innerText = s
+            }
+            
+            
+    </script>
+
+</body>
+</html>

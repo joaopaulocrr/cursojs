@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+        }
+        div#area {
+            font: normal 25px arial;
+            background-color: rgb(37, 177, 37);
+            color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+
+    <!--Essa é uma forma de fazer a ligaçãoi-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja
+    </div>
+    
+    <script>
+         var a = document.getElementById("area")
+
+         //Essa é outra forma de fazer a ligação
+         a.addEventListener('click', clicar)
+         a.addEventListener('mouseenter', entrar)
+         a.addEventListener('mouseout', sair)
+       
+         function clicar(){
+            a.innerText = "Clicou"
+            a.style.background ="red"
+        }
+
+        function entrar(){
+            a.innerText = "Entrou!"
+            a.style.background = "green"
+        }
+        
+        function sair(){
+            a.innerText = "Saiu!"
+            a.style.background = "Greenyellow"
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        nome = prompt('Qual é o seu nome?')
+        document.write('Seja bem vindo '+ nome + '!</br>')
+        ano_nasc = prompt('Em que ano você nasceu?')
+        data = new Date()
+        ano_atual = data.getFullYear()
+        idade = ano_atual - ano_nasc
+        document.write('Você tem ' + idade + ' anos de idade!</br>')
+        sal = 1350.85
+        document.write(`Seu salário é ${sal.toLocaleString('pt-BR', {style: 'currency', currency:'EUR'})}`)
+    </script>
+</body>
+</html>
